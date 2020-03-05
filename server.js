@@ -10,29 +10,24 @@ const VEHICLE_REGISTER_ABI = require('./src/pages/vehicle-registration/ABI')
 const DID_REGISTER_ABI = require('./src/pages/did-registration/did-contract-details').abi
 const axios = require('axios').default
 const generateRandomRoute = require('./modules/generateRandomRoute')
+const fetchGeometries = require('./modules/fetchGeometries')
+const turfifyGeometries = require('./modules/turfifyGeometries')
 const mapboxtoken = 'pk.eyJ1IjoiaW90eHBsb3JlciIsImEiOiJjazZhbXVpZjkwNmc4M29vZ3A2cTViNWo1In0.W38aUZEDsxdIcdVVJ7_LWw'
+
 
 // Fetch registered zones from Zone Registry (Tezos?)
 const samplePolygons = require('./data/samplePolygons.json');
-const turfPolygons = [];
+const sampleJurisdictionDIDdocs = require('./data/sampleZoneDids.json')
 
+// 1. Lint did docs json
+//
+console.log("sampleJurisdictionDIDdocs", sampleJurisdictionDIDdocs);
+
+console.log(fetchGeometries)
+
+var geojsonGeometries = await fetchGeometries(sampleJurisdictionDIDdocs);
+var turfPolygons = await turfifyGeometries(geojsonGeometries);
 var sampleVehicles = [];
-
-samplePolygons.forEach((polygon) => {
-  // If polygons are FeatureCollections ...
-  if (polygon.type == "FeatureCollection") {
-    turfPolygons.push(turf.polygon(polygon.features[0].geometry.coordinates))
-  } else if (polygon.type == 'Feature') {
-    turfPolygons.push(turf.polygon(polygon.geometry.coordinates))
-  } else if (polygon.type == "Polygon") {
-    turfPolygons.push(polygon.coordinates)
-  } else {
-    console.log("Error with a polygon");
-  }
-});
-
-
-
 
 
 server.use(bodyParser.urlencoded({

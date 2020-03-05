@@ -11,17 +11,17 @@
       "jurisdictionName": "United Kingdom",
       "jurisdictionAddr": "0x123456789abcdefghi",
       "ISO3": "GBR",
-      "borders": "./zones/GBR.json" // <- ??
+      "borders": "./zones/GBR.json"
     },
     "service": [{
         "id": "did:example:123456789abcdefghi#london-congestion-zone",
         "type": "TerrestrialPolicyZoneGeometryService",
-        "zoneType": ["urban", "terrestrial"], // <- more sophisticated categorization
+        "zoneType": ["urban", "terrestrial"],
         "name": "London Congestion Zone",
         "serviceEndpoint": "./zones/london-congestion-zone.json",
         "policies": {
           "subjectDevices": ["road", "commercial"],
-          "beneficiary": "0x456789123cdef...", // "london.hyperaware.eth" <-- who gets paid
+          "beneficiary": "0x456789123cdef...",
           "entryCharge": 0,
           "exitCharge": 0,
           "chargePerMinute": 0.15,
@@ -37,12 +37,12 @@
       {
         "id": "did:example:123456789abcdefghi#heathrow-restricted-airspace",
         "type": "AerialialPolicyZoneGeometryService",
-        "zoneType": ["urban", "aerial"], // <- more sophisticated categorization
+        "zoneType": ["urban", "aerial"],
         "name": "Heathrow Restricted Airspace",
         "serviceEndpoint": "./zones/heathrow-restricted-airspace.json",
         "policies": {
           "subjectDevices": ["uav"],
-          "beneficiary": "0x678912345fghi...", // "heathrow.hyperaware.eth"
+          "beneficiary": "0x678912345fghi...",
           "entryCharge": 0,
           "exitCharge": 0,
           "chargePerMinute": 0,
@@ -57,12 +57,12 @@
       {
         "id": "did:example:123456789abcdefghi#port-of-southampton",
         "type": "MaritimePolicyZoneGeometryService",
-        "zoneType": ["port", "maritime"], // <- more sophisticated categorization
+        "zoneType": ["port", "maritime"],
         "name": "Port of Southampton",
         "serviceEndpoint": "./zones/port-of-southampton.json",
         "policies": {
-          "beneficiary": "0x89123456efghi...", // "port.southampton.hyperaware.eth"
-          "entryCharge": 500, // <- more sophisticated logic - a function of cargo value. Obvs complexity :chart_with_upwards_trend:
+          "beneficiary": "0x89123456efghi...",
+          "entryCharge": 500,
           "exitCharge": 0,
           "chargePerMinute": 0,
           "currency": "GBP",
@@ -93,12 +93,12 @@
       "service": [{
         "id": "did:example:56789abcdefghigermany#berlin-congestion-zone",
         "type": "TerrestrialPolicyZoneGeometryService",
-        "zoneType": ["urban", "terrestrial"], // <- more sophisticated categorization
-        "name": "Berlin Congestion Zone", // <- In German?
+        "zoneType": ["urban", "terrestrial"],
+        "name": "Berlin Congestion Zone",
         "serviceEndpoint": "./zones/berlin-congestion-zone.json",
         "policies": {
           "subjectDevices": ["road", "commercial"],
-          "beneficiary": "0x6789123cdef...", // "congestion.berlin.hyperaware.eth" <-- who gets paid
+          "beneficiary": "0x6789123cdef...",
           "entryCharge": 2,
           "exitCharge": 0,
           "chargePerMinute": 0.35,
@@ -128,12 +128,12 @@
       "service": [{
         "id": "did:example:56789abcdefghigermany#berlin-congestion-zone",
         "type": "TerrestrialPolicyZoneGeometryService",
-        "zoneType": ["urban", "terrestrial"], // <- more sophisticated categorization
-        "name": "Berlin Congestion Zone", // <- In German?
+        "zoneType": ["urban", "terrestrial"],
+        "name": "Berlin Congestion Zone",
         "serviceEndpoint": "./zones/berlin-congestion-zone.json",
         "policies": {
           "subjectDevices": ["road", "commercial"],
-          "beneficiary": "0x6789123cdef...", // "congestion.berlin.hyperaware.eth" <-- who gets paid
+          "beneficiary": "0x6789123cdef...",
           "entryCharge": 2,
           "exitCharge": 0,
           "chargePerMinute": 0.35,
@@ -163,12 +163,12 @@
       "service": [{
         "id": "did:example:789abcdefghijknetherlands#rotterdam-port-zone",
         "type": "MaritimePolicyZoneGeometryService",
-        "zoneType": ["port", "maritime"], // <- more sophisticated categorization
-        "name": "Port of Rotterdam", // <- In German?
+        "zoneType": ["port", "maritime"],
+        "name": "Port of Rotterdam",
         "serviceEndpoint": "./zones/rotterdam-port-zone.json",
         "policies": {
           "subjectDevices": ["ship"],
-          "beneficiary": "0x3678912cdef...", // "rotterdam.netherlands.hyperaware.eth" <-- who gets paid
+          "beneficiary": "0x3678912cdef...",
           "entryCharge": 2,
           "exitCharge": 0,
           "chargePerMinute": 0.35,
