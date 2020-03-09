@@ -1,6 +1,12 @@
 {
+  "type": "FeatureCollection",
+
+  "features": [{
   "type": "Feature",
-  "properties": {},
+  "properties": {
+    "name": "Heathrow-Restricted-Airspace",
+    "type": "aerial"
+  },
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -113,3 +119,4 @@
     ]
   }
 }
+]}

@@ -4,7 +4,7 @@
   "features": [{
       "type": "Feature",
       "properties": {
-        "name": "London",
+        "name": "London-Congestion-Zone",
         "tezosAddress": "tz1cJyfdsasdreskHCadvterJKFdDSfRHc1",
         "type": "terrestrial"
       },
