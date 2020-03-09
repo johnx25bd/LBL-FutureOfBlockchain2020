@@ -7,7 +7,7 @@ import '../../../node_modules/react-modal-video/scss/modal-video.scss';
 
 // import images
 import database from '../../images/icon/server.svg'
-import video from '../../images/icon/video.svg'
+import computer from '../../images/icon/computer.svg'
 import location from '../../images/icon/intellectual.svg'
 
 
@@ -89,7 +89,7 @@ class Feature extends Component {
                             <Col md={4} className="col-12 mt-5">
                                 <div className="features text-center">
                                     <div className="image position-relative d-inline-block">
-                                        <img src={video} alt="" />
+                                        <img src={computer} alt="" />
                                     </div>
 
                                     <div className="content mt-4">

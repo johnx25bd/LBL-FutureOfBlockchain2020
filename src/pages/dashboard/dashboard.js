@@ -137,6 +137,8 @@ export class Dashboard extends React.Component {
 
     loadVehiclesAndZones = async (map) => {
         // Draw zone boundaries on map
+
+        console.log("ZONES", this.state.zones);
         this.state.zones.forEach(function (zone) {
             let zoneName = zone.features[0].properties.name,
                 // zoneAddress = zone.features[0].properties.tezosAddress,
