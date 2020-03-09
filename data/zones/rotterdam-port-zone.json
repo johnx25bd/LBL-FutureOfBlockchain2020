@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Rotterdam",
-        "didEndpoint": "did:example:789abcdefghijknetherlands#rotterdam-port-zone"
+        "didEndpoint": "did:example:789abcdefghijknetherlands#rotterdam-port-zone",
         "type": "maritime"
       },
       "geometry": {
