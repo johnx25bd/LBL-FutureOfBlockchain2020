@@ -19,7 +19,7 @@ const mapboxtoken = 'pk.eyJ1IjoiaW90eHBsb3JlciIsImEiOiJjazZhbXVpZjkwNmc4M29vZ3A2
 // Fetch registered zones from Zone Registry (Tezos?)
 var samplePoints = require('./data/samplePoints.json');
 const samplePolygons = require('./data/samplePolygons.json');
-const sampleJurisdictionDIDdocs = require('./data/sampleZoneDids.json')
+const sampleJurisdictionDIDdocs = require('./data/modelZoneDid.json')
 // const sampleVehicles = require('./data/sampleVehicles.json')
 
 var polygonsFetched = false;

@@ -3,6 +3,7 @@ import Footer from "../../components/Layout/Footer";
 import Topbar from "../../components/Layout/Topbar";
 
 export class RegisterJurisdiction extends React.Component {
+
     componentDidMount() {
         // Dismiss loading bar
         document.getElementById("pageLoader").style.display = "block";
@@ -13,6 +14,26 @@ export class RegisterJurisdiction extends React.Component {
         document.getElementById('topnav').classList.add('bg-white');
         window.addEventListener("scroll", this.scrollNavigation, true);
     }
+
+    // Functionality to implement:
+
+    // Form able to accept
+      // - GeoJSON
+      // - Zone Name (string)
+      // - Beneficiary ethereum address
+      // - Charge per minute
+      // - Currency of charges
+      // - Arweave private key.
+
+    // onSubmit:
+      // - Write GeoJSON files to Arweave. return  `geojsonURL`.
+      // - Build zone DID document with input data. Create object for each zone in `service` array, including `geojsonURL`, `chargePerMinute, `beneficiary`, `currency`, `name`.
+      // - Write zone DID document to Arweave. return `didDocURL`.
+      
+      // Sign tx with metamask to:
+      // - Register `didDocURL` to Ethereum.
+      // - Register `address` to `registeredAddresses` contract at 0x771110c20009bfC55d79548D9E0fC523D8DC40B7
+
 
     scrollNavigation = () => {
         var doc = document.documentElement;
