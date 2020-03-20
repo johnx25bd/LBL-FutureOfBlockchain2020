@@ -10,6 +10,7 @@ const DID_REGISTER_ABI = require('./src/pages/did-registration/did-contract-deta
 const axios = require('axios').default
 
 const generateRandomRoute = require('./modules/generateRandomRoute')
+const fetchGeometriesFromDidDocs = require('./modules/fetchGeometriesFromDidDocs')
 const mapboxtoken = 'pk.eyJ1IjoiamdqYW1lcyIsImEiOiJjazd5cHlucXUwMDF1M2VtZzM1bjVwZ2hnIn0.Oavbw2oHnexn0hiVOoZwuA'
 
 // Fetch registered zones from Zone Registry (Tezos?)
