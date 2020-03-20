@@ -16,6 +16,14 @@ const mapboxtoken = 'pk.eyJ1IjoiamdqYW1lcyIsImEiOiJjazd5cHlucXUwMDF1M2VtZzM1bjVw
 // Fetch registered zones from Zone Registry (Tezos?)
 var samplePoints = require('./data/samplePoints.json');
 const samplePolygons = require('./data/samplePolygons.json');
+
+
+// Fetch DID docs from Ethereum
+// L> var didDocURIs = [uri, uri, uri];
+//  didDocURIs.map(fetch(uri));
+  // Promise.all(didDocURIs)
+  // Get array of registered Arweave URIs by hitting Ethereum contract ...
+  // Resolve arweave URIs 
 const sampleJurisdictionDIDdocs = require('./data/sampleZoneDids.json')
 // const sampleVehicles = require('./data/sampleVehicles.json')
 

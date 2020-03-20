@@ -83,4 +83,24 @@ contract ZoneRegistry {
         }
         return existingAddrs;
     }
+
+    function getAllRegisteredURIs() {
+        loop through addresses
+        string[] URIs;
+
+        URIs.push(getURI(address))
+
+        return URIs;
+
+    }
+
+    DID[] existingDID;
+    function getExistingDIDs() public returns (DID[] memory) {
+        for (uint256 i = 0; i < registeredAddrs.length; i++) {
+            if (DIDs[registeredAddrs[i]].exist) {
+                existingDID.push(DIDs[registeredAddrs[i]]);
+            }
+        }
+        return existingDID;
+    }
 }

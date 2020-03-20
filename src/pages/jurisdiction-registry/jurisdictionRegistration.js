@@ -14,6 +14,62 @@ export class RegisterJurisdiction extends React.Component {
         window.addEventListener("scroll", this.scrollNavigation, true);
     }
 
+
+
+    /*
+    
+    // Log in with metamask
+        > Check to see if DID is already registered
+            If YES,
+            > Fetch DID URI of sender
+            > Fetch GeoJSON from service endpoints
+            >  load zone polygons on map
+            >  load zone info cards on form input panel 
+                (with remove options)
+            
+            If NO,
+            > Don't show anything on map
+            > Don't show zone info cards
+        
+        > User fills out Register New Zone form.
+
+        > On REGISTER ZONE click (LEO!!!) (final registration to blockchains)
+
+            for (i in DIDdoc.service) {
+                > Write all GeoJSON to arweave
+                writeToArweave(JSON.stringify(geoJSON))
+                    L> each one returns geojsonArweaveURI 
+                        DIDdoc.service[i].serviceEndpoint = geojsonArweaveURI;
+            }
+
+            write JSON.stringify(DIDdoc) to arweave
+                L> returns arweaveURI
+            
+            register DID to Ethereum    
+                registerDID(arweaveURI)
+            
+            function registerDID(DIDdoc, URI) {
+                var hash = keccak(DIDdoc);
+                
+                input hash and URI on contract
+                    > requires metamask signature
+            }
+    
+    
+    
+    
+    
+    
+    */
+
+
+
+
+
+
+
+
+
     scrollNavigation = () => {
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
